@@ -1,69 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      TFJ TECHNOLOGY
+    <ion-title class="ion-text-center">
+      <strong>TFJ TECHNOLOGY</strong>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="container">
+  <ion-header collapse="condense" class="container">
     <ion-toolbar>
-      <ion-title size="large">TFJ TECHNOLOGY</ion-title>
+      <ion-title size="large" class="ion-text-center">
+        <strong>TFJ TECHNOLOGY</strong>
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-
-  <ion-toolbar>
-    <ion-button (click)="deconnexionPage()">Deconnexion</ion-button>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-
-  <div id="container">
-    <div class="container-fluid mt-4">
-
-      <nav class="navbar navbar-expand-lg ">
+  <div class="container">
+    <div class="container mt-4">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div>
-            <a class="navbar-brand" href="#">Employee Management System</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</button>
+            <h2 class="navbar-brand" mb-2 href="#">Employee Management</h2>
+            <button data-bs-toggle="modal" class="btn btn-outline-success btn-sm m-2" type="submit" routerLink="/create-employee">Add Employee</button>
           </div>
 
-          <form class="d-flex" role="search">
+          <form class="d-flex m-2 container" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           </form>
-
         </div>
       </nav>
 
-    </div>
+      <div class="mt-2 container">
+        <ion-list>
+          <!-- Table Header -->
+          <ion-item lines="full" class="ion-hide-sm-down"> <!-- Masque sur les petits écrans -->
+            <ion-label class="ion-text-start">Nom</ion-label>
+            <ion-label class="ion-text-start">Prénom</ion-label>
+            <ion-label class="ion-text-start">Email</ion-label>
+            <ion-label class="ion-text-end">Actions</ion-label>
+          </ion-item>
 
-
-    <!-- Add employee modal-->
-
-
-  </div>
-  <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="">
-          toto
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+          <!-- Table Rows -->
+          <ion-item *ngFor="let employee of employees">
+            <ion-label class="ion-text-start">{{ employee.firstname }}</ion-label>
+            <ion-label class="ion-text-start">{{ employee.lastname }}</ion-label>
+            <ion-label class="ion-text-start">{{ employee.email }}</ion-label>
+            <ion-label class="ion-text-end">
+              <ion-button class="edit-button" (click)="editEmployee(employee)" routerLink="/edit-employee" expand="full" fill="solid" color="primary">Edit</ion-button>
+              <ion-button class="delete-button" (click)="deleteEmployee(employee)" expand="full" fill="solid" color="danger">Delete</ion-button>
+            </ion-label>
+          </ion-item>
+        </ion-list>
       </div>
     </div>
   </div>
-</div>
 </ion-content>
-

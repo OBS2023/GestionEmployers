@@ -1,7 +1,8 @@
 #container {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    height: 100vh; /* Ajustez si nécessaire */
   }
   
   .container {
@@ -16,13 +17,8 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  /*
+  
   .form-control {
     margin-bottom: 15px;
   }
-
-  .add-form{
-    margin-top: 30px;
-    margin-bottom: 275px;
-  }*/
   

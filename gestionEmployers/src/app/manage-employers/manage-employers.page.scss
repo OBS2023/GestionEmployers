@@ -1,0 +1,46 @@
+.text-center {
+  text-align: center;
+}
+
+ion-title {
+  font-weight: bold;
+}
+
+.edit-button {
+  flex: 1;
+  margin-right: 5px;
+  /* Ajoutez une marge entre les boutons si nécessaire */
+}
+
+.delete-button {
+  flex: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 10px;
+    /* Réduire la taille de police de moitié pour tous les éléments */
+  }
+
+  /* Styles spécifiques aux petits écrans pour les boutons */
+  .edit-button,
+  .delete-button {
+    font-size: 10px;
+    /* Réduire de moitié la taille de la police pour les boutons */
+    width: auto;
+    /* Les boutons prennent la largeur du texte */
+    padding: 5px 2px;
+    /* Ajuster la marge intérieure selon vos besoins */
+  }
+  .navbar-brand {
+    text-align: center;
+    margin-bottom: 2em;
+    /* Ajoutez une marge en bas si nécessaire */
+  }
+  ion-label,
+  ion-title {
+    font-size: 0.9em;
+    /* Ajustez la taille du texte selon vos préférences */
+  }
+}
+

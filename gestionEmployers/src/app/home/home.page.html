@@ -13,14 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-toolbar>
-    <ion-button (click)="deconnexionPage()">Deconnexion</ion-button>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
+  
 
   <div id="container">
-    
+    <div class="home-container">
+      <h2>Bienvenue chez TFJ Technology</h2>
+      <p>Découvrez notre système de gestion des employés.</p>
+      <ion-button expand="full" routerLink="/manage-employers">Voir la liste des employés</ion-button>
+    </div>
   </div>
 </ion-content>

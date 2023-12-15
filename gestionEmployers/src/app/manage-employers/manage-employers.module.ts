@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ManageEmployersPageRoutingModule } from './manage-employers-routing.module';
 
 import { ManageEmployersPage } from './manage-employers.page';
+import { EmployeeService } from '../services/employee.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ManageEmployersPage } from './manage-employers.page';
     IonicModule,
     ManageEmployersPageRoutingModule
   ],
-  declarations: [ManageEmployersPage]
+  declarations: [ManageEmployersPage],
+  providers: [EmployeeService],
 })
 export class ManageEmployersPageModule {}

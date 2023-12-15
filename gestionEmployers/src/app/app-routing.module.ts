@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'create-employee',
     loadChildren: () => import('./create-employee/create-employee.module').then( m => m.CreateEmployeePageModule)
   },
+  {
+    path: 'edit-employee',
+    loadChildren: () => import('./edit-employee/edit-employee.module').then( m => m.EditEmployeePageModule)
+  },
 ];
 
 @NgModule({

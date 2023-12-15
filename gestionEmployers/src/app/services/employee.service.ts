@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private apiUrl = 'https://api.example.com/employees'; // Remplacez par l'URL réel de votre API
+  private apiUrl = 'https://github.com/julienpan/fakeapi'; // Remplacez par l'URL réel de votre API
 
   constructor(private http: HttpClient) {}
 
